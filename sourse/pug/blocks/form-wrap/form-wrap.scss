@@ -3,10 +3,14 @@
 			// @extend .form-group;
 			
 		}
-		&__input{
-			// @extend .form-control;
+	&__input{
+		// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		resize: none;
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		text-align: center;
  	}
  	&__btn{
  		cursor: pointer;
