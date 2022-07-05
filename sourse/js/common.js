@@ -271,12 +271,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -364,6 +364,14 @@ function eventHandler() {
 
 	});
 	// modal window
+
+	window.addEventListener('scroll', function() {
+		if (this.scrollY >= 110) {
+			$('.top-nav').addClass('scrolled');
+		} else {
+			$('.top-nav').removeClass('scrolled');
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

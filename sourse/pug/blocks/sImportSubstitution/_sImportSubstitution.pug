@@ -1,0 +1,25 @@
+mixin sImportSubstitution(data)
+	// start sImportSubstitution
+	+b.SECTION.sImportSubstitution.section#sImportSubstitution&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Импортозамещения ПО
+					span на базе 1С
+			+e.row.row
+				+e.col.col-lg-6
+					p В&nbsp;государственных компаниях заменяют MS&nbsp;Windows<br>отечественным аналогом&nbsp;&mdash; AstraLinux. Эта операционная система используется в&nbsp;государственных органах, силовых ведомствах и спецслужбах. Для замены GoogleDocs и&nbsp;MicrosoftOffice<br>разработан российский сервис МойОфис. 
+					p С&nbsp;1991 года в&nbsp;России пользуются популярностью отечественные программы &laquo;1С&raquo;, которые установлены во&nbsp;многих российских<br>компаниях для автоматизации бухгалтерского и&nbsp;управленческого<br>учета. Решения фирмы &laquo;1С&raquo; максимально адаптированы под<br>специфику российского бизнеса, систему налогообложения в<br>России и&nbsp;формы отчетности.
+					p Справа представлен каталог программных продуктов &laquo;1С&raquo;,<br>входящих в&nbsp;реестр, ознакомьтесь с&nbsp;ними подробнее.
+				.col-lg-6
+					mixin item(text)
+						+e.link(href="#")
+							!= text
+							+e.icon-wrap
+								+icon('chevron-right')
+					+item('1С:Предприятие 8 для управления и учета')
+					+item('1С:Предприятие 8 для бюджетных учреждений')
+					+item('1С:Отраслевые и специализированные решения')
+					+item('Дистрибьюция ПП 1С:Совместимо')
+					+item('Электронное обучение')
+			+e.btn(href="#").btn.btn-primary Получить консультацию
+	// end sImportSubstitution

@@ -3,20 +3,42 @@
 .soc{
 	@include roww(10px, m);
 	display: flex;
+	justify-content: center;
 	&__item{
 		text-decoration: none !important; 
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
+		width: rem(45);
+		height: rem(45);
+		border-radius: 10px;
+		@include media-breakpoint-up(md) {
+			border-radius: 15px;
+			width: rem(70);
+			height: rem(70);
+		}
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
+			box-shadow:  0px 0px 20px 0px #0000001f;
 		}
-		
+		&:nth-child(1) {
+			background-color: $purple;
+		}
+		&:nth-child(2) {
+			background-color: $cyan;
+		}
+		&:nth-child(3) {
+			background-color: $teal;
+		}
 	}
 	.icon{
-		font-size: rem(30);
+		font-size: rem(19.29);
+		color: $white;
+		@include media-breakpoint-up(md) {
+			font-size: rem(30);
+		}
 	}
 
 

@@ -267,11 +267,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -486,4 +486,37 @@ iframe {
 .swiper-wrapper{
 	
 	// @include row-sw(10px, sm, 100px);
+}
+
+.bg-yellow {
+	background-color: $gray-100;
+}
+
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #{$primary};
+	@include media-breakpoint-up(lg) {
+		box-shadow: var(--bs-btn-box-shadow);
+		&:hover {
+			box-shadow: none;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		--bs-btn-padding-y: #{rem(12.4)};
+    --bs-btn-padding-x: #{rem(30)};
+		--bs-btn-border-radius: 10px;
+	}
+	@include media-breakpoint-down(lg) {
+		box-shadow: none;
+		&:hover {
+			box-shadow: var(--bs-btn-box-shadow);
+		}
+	}
+}
+
+h2 {
+	span {
+		color: $primary;
+	}
 }

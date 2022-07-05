@@ -20,14 +20,45 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+		+e.row.row
+			.col-auto.d-lg-none
+				+menu-toggle()
+			.col-lg-auto.col
+				+e.logo
+					a(href="#")
+						+img('img/svg/logo.svg')
+			.col-12.col-lg.order-lg-0.order-last.d-none.d-lg-block
+				+mnu()
+			.col-auto
+				+e.contacts
+					+e.num(href="tel:+78463004840")
+						+icon('mobile').d-block.d-lg-none
+						span.d-none.d-lg-block +7 (846) 300 48 40
+					+e.socials
+						+soc()
+							+item-sos('viber')
+							+item-sos('telegram')
+							+item-sos('phone')
+		.menu-mobile.menu-mobile--js.d-block.d-lg-none
+			.menu-mobile__inner
+				//- +menu-toggle()
+				+mnu()
+				+e.contacts-mob
+					+e.tel(href="tel:88005005748")
+						+icon('call')
+						| 8 (800) 500-57-48
+					+e.mail(href="mailto:info@datexsoft.ru") info@datexsoft.ru
+					+soc()
+						+item-sos('viber')
+						+item-sos('telegram')
+						+item-sos('phone')
+				+b.footer
+					+e.row.row
+						+e.col.col-lg.col-xl-4
+							p © Datexsoft 2022.<br>Все права защищены.
+						+e.col.col-lg.col-xl-4.text-center
+							a(href="#") Политика конфиденциальности
+						+e.col.col-lg-auto.col-xl-4.text-lg-end
+							p г. Самара, Партизанская ул, дом № 86, офис 723
+							p Пн-Пт с 9:00 до 18:00
 	// end top-nav

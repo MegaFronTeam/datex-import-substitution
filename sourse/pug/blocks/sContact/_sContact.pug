@@ -1,9 +1,18 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+		+e.container.container
+			+e.IMG(src="img/header-bg-1.png", alt="").img-bg--left
+			+e.IMG(src="img/header-bg-1.png", alt="").img-bg--right
 			.row
+				.col-lg-8.ms-auto.me-auto.text-center
+					p Свяжитесь с&nbsp;нами любым удобным способом, по&nbsp;телефону, электронной почте<br>или воспользуйтесь любым из&nbsp;мессенджеров:
+					a.h1(href="tel:88005005748")
+						+icon('call')
+						| 8 (800) 500-57-48
+					+e.mail(href="mailto:info@datexsoft.ru") info@datexsoft.ru
+					+soc()
+						+item-sos('viber')
+						+item-sos('telegram')
+						+item-sos('phone')
 	// end sContact

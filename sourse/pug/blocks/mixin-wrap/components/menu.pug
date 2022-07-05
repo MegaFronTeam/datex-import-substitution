@@ -1,6 +1,7 @@
 
 mixin mnu()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item.current-menu-item(itemprop="item" ): a(href= '#' itemprop="url") Импортозамещение ПО
 		each link in nav
 			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 			if link.subnav

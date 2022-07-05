@@ -1,19 +1,141 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
-	}
-
+	@include mt;
+	padding-left: rem(40);
+	padding-right: rem(40);
+	padding-top: rem(40);
+	padding-bottom: rem(30);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
 	@include media-breakpoint-up(lg) {
-		background-color: red;
-
+		position: absolute;
 	}
-	p{
-		@include ell();
+	&.scrolled {
+		@include media-breakpoint-up(lg) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #fff;
+			border-bottom: 1px solid $gray-300;
+			padding: 1.125rem 1.25rem;
+			.soc__item {
+				background-color: $gray-100;
+			}
+		}
 	}
-
+	&__row {
+		align-items: center;
+	}
+	&__num {
+		color: $body-color;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(10);
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(30);
+		}
+		.icon {
+			font-size: rem(24);
+			color: $primary;
+		}
+	}
+	&__socials {
+		.soc {
+			--bs-gutter-x: #{rem(5)};
+			display: none;
+			@include media-breakpoint-up(xl) {
+				display: flex;
+			}
+			&__item {
+				width: rem(40);
+				height: rem(40);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+	
+				background-color: #FFFFFF;
+				border-radius: 10px;
+				// &:hover {
+				// 	box-shadow:  0px 0px 20px 0px #0000001f;
+				// }
+				.icon {
+					flex: 0 0 auto;
+					font-size: rem(20);
+					&-viber {
+						font-size: rem(24);
+						color: $purple;
+					}
+					&-telegram {
+						color: $cyan;
+					}
+					&-phone {
+						color: $teal;
+					}
+				}
+			}
+		}
+	}
+	&__logo, &__contancts {
+		@include media-breakpoint-up(xxl) {
+			width: rem(320);
+		}
+	}
+	&__logo {
+		@include media-breakpoint-down(lg) {
+			width: rem(100);
+			margin-left: auto;
+			margin-right: auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__contacts {
+		display: flex;
+		align-items: center;
+	}
+	@include media-breakpoint-down(lg) {
+		padding-left: rem(20);
+		padding-right: rem(20);
+		padding-top: rem(18);
+		padding-bottom: rem(18);
+		background-color: #fff;
+		border-bottom: 1px solid $gray-300;
+	}
+	&__contacts-mob {
+		padding-top: rem(38);
+		padding-bottom: 0;
+		padding-right: rem(15);
+		padding-left: rem(15);
+		text-align: center;
+		
+	}
+	&__tel {
+		margin-bottom: rem(18);
+		display: block;
+		font-weight: 700;
+		color: $body-color;
+		font-size: rem(20);
+		.icon {
+			color: $primary;
+			margin-right: rem(15);
+			font-size: rem(20);
+		}
+	}
+	&__mail {
+		font-weight: 500;
+		display: block;
+		margin-bottom: rem(28);
+		font-size: rem(14);
+		&:not(:hover) {
+			color: rgba($color: $body-color, $alpha: .5);
+		}
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

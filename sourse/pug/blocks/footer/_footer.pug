@@ -1,9 +1,10 @@
 mixin footer()
 	+b.FOOTER.footer
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		+e.row.row
+			+e.col.col-lg.col-xl-4
+				p © Datexsoft 2022.<br>Все права защищены.
+			+e.col.col-lg.col-xl-4.text-center
+				a(href="#") Политика конфиденциальности
+			+e.col.col-lg-auto.col-xl-4.text-lg-end
+				p г. Самара, Партизанская ул, дом № 86, офис 723
+				p Пн-Пт с 9:00 до 18:00

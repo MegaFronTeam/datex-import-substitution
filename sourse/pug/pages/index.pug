@@ -6,6 +6,9 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sBaseList/_sBaseList.pug
+include ../blocks/sWhoNeed/_sWhoNeed.pug
+include ../blocks/sImportSubstitution/_sImportSubstitution.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -17,35 +20,19 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	
 	
-	+header()
 	+top-nav()
-	+topLine
-	.container
-		+in-c('radio', 'sdasdasdasd')
-		+in-c('radio', 'sdasdasdasd')
-	+form-wrap
-		+input('fsdfs','tel')(required)
-		button  btn
-	+headerBlock
-
-	+soc()
-	+sForm()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		each item in items
-			li 
-				h2= item.title
-				p= item.text
-	//- +sContact()
-	
+	//- +topLine
+	+header().bg-yellow
+	+sBaseList
+	+sWhoNeed().bg-yellow
+	+sImportSubstitution
+	+sContact().bg-yellow
 	+footer()
       
 

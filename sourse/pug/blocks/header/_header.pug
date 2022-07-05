@@ -1,5 +1,11 @@
 mixin header()
 	// start header
 	+b.HEADER.header#header&attributes(attributes)
-		block
+		+e.container.container
+			+e.IMG(src="img/header-bg-1.png", alt="").img-bg--left
+			+e.IMG(src="img/header-bg-1.png", alt="").img-bg--right
+			h1 #[span Импортозамещение]<br>в&nbsp;сфере автоматизации бизнеса от&nbsp;компании Датекс Софт
+			p Основным направлением деятельности компании является продажа и&nbsp;внедрение программных продуктов на&nbsp;базе&nbsp;1С
+			+e.btn(href="#").btn.btn-primary Получить консультацию
+			+img('img/header-img-1.png').server-img
 	// end header

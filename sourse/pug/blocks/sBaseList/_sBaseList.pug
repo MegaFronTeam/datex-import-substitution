@@ -1,0 +1,172 @@
+mixin listItem(icon, text)
+	li
+		+icon(icon)
+		p!= text
+mixin sBaseList(data)
+	// start sBaseList
+	+b.SECTION.sBaseList.section#sBaseList&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.h1 Базовый список аналогов для 
+					span импортозамещения
+			+ddGroup
+				+ddGroupItem('Операционная система серверов', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Windows Server')
+						+e.col.col
+							ul
+								+listItem('apply', 'Альт Образование')
+								+listItem('apply', 'Альт Сервер')
+								+listItem('apply', 'Astra Linux Special Edition')
+								+listItem('apply', 'Astra Linux Common Edition')
+								+listItem('apply', 'РОСА «ХРОМ» Сервер')
+								+listItem('apply', 'РОСА «КОБАЛЬТ» Сервер')
+								+listItem('apply', 'РОСА «ХРОМ» Для образования Сервер')
+								+listItem('apply', 'РЕД ОС Сервер')
+								+listItem('apply', 'РЕД ОС Сервер ФСТЭК')
+				+ddGroupItem('Операционная система серверов', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Windows Server')
+						+e.col.col
+							ul
+								+listItem('apply', 'Альт Образование')
+								+listItem('apply', 'Альт Сервер')
+								+listItem('apply', 'Astra Linux Special Edition')
+								+listItem('apply', 'Astra Linux Common Edition')
+								+listItem('apply', 'РОСА «ХРОМ» Сервер')
+								+listItem('apply', 'РОСА «КОБАЛЬТ» Сервер')
+								+listItem('apply', 'РОСА «ХРОМ» Для образования Сервер')
+								+listItem('apply', 'РЕД ОС Сервер')
+								+listItem('apply', 'РЕД ОС Сервер ФСТЭК')
+				+ddGroupItem('Операционная система ПК', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Windows 7, 10 ...')
+						+e.col.col
+							ul
+								+listItem('apply', 'Альт Рабочая станция')
+								+listItem('apply', 'Альт Образование')
+								+listItem('apply', 'Astra Linux Special Edition')
+								+listItem('apply', 'Astra Linux Common Edition')
+								+listItem('apply', 'РОСА «ХРОМ» Рабочая станция')
+								+listItem('apply', 'РОСА «КОБАЛЬТ»')
+								+listItem('apply', 'Рабочая станция РОСА «КОБАЛЬТ» ФСТЭК Рабочая станция')
+								+listItem('apply', 'РОСА «ХРОМ» Для образования Рабочая станция')
+								+listItem('apply', 'РЕД ОС Рабочая станция')
+								+listItem('apply', 'РЕД ОС Рабочая станция ФСТЭК')
+				+ddGroupItem('СУБД', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft SQL Server')
+								+listItem('cross', 'IBM DB2')
+								+listItem('cross', 'СУБД Oracle Database')
+						+e.col.col
+							ul
+								+listItem('apply', 'СУБД Postgres Pro Enterprise')
+								+listItem('apply', 'СУБД Postgres Pro Enterprise ФСТЭК')
+								+listItem('apply', 'СУБД Postgres Pro Standard')
+								+listItem('apply', 'СУБД Postgres Pro Standard ФСТЭК')
+								+listItem('apply', 'СУБД Ред База Данных')
+				+ddGroupItem('Распределенная БД', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Active Directory')
+						+e.col.col
+							ul
+								+listItem('apply', 'Программный комплекс ALD Pro на базе ОС Astra Linux')
+				+ddGroupItem('Резервное копирование', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Veeam')
+								+listItem('cross', 'COMMVAULT')
+						+e.col.col
+							ul
+								+listItem('apply', 'RuBackup')
+								+listItem('apply', 'Кибер Бэкап (Киберпротект)') 
+				+ddGroupItem('Офисные программы', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Office')
+						+e.col.col
+							ul
+								+listItem('apply', 'Р7-Офис. Редактор')
+								+listItem('apply', 'МойОфис Стандартный')
+								+listItem('apply', 'МойОфис Стандартный ФСТЭК')
+								+listItem('apply', 'МойОфис Профессиональный')
+								+listItem('apply', 'МойОфис Профессиональный ФСТЭК')
+								+listItem('apply', 'МойОфис Образование')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Office 365')
+						+e.col.col
+							ul
+								+listItem('apply', 'Р7-Облачный офис для бизнеса')
+								+listItem('apply', 'МойОфис Частное Облако')
+								+listItem('apply', 'МойОфис Защищенное Облако')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Adobe Acrobat Pro')
+								+listItem('cross', 'ABBYY FineReader')
+						+e.col.col
+							ul
+								+listItem('apply', 'Система оптического распознавания текста «SETERE OCR»')
+				+ddGroupItem('Почтовые серверы', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Exchange Server')
+						+e.col.col
+							ul
+								+listItem('apply', 'Tegu Professional')
+								+listItem('apply', 'Tegu Advanced')
+								+listItem('apply', 'Tegu Enterprise')
+								+listItem('apply', 'МойОфис.Почта')
+				+ddGroupItem('ВКС и командная работа', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Teams')
+								+listItem('cross', 'Zoom')
+						+e.col.col
+							ul
+								+listItem('apply', '1С-Коннект')
+								+listItem('apply', 'TrueConf Server')
+								+listItem('apply', 'TrueConf Enterprise')
+				+ddGroupItem('Облачные платформы', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'Microsoft Azure')
+						+e.col.col
+							ul
+								+listItem('apply', 'VK Cloud Solutions')
+								+listItem('apply', 'Yandex.Cloud')
+								+listItem('apply', 'Selectel')
+				+ddGroupItem('САПР', 'active')
+					+e.row.row
+						+e.col.col
+							ul
+								+listItem('cross', 'SolidWorks')
+								+listItem('cross', 'Revit')
+								+listItem('cross', 'Autodesk')
+						+e.col.col
+							ul
+								+listItem('apply', 'Платформа nanoCAD')
+								+listItem('apply', 'КОМПАС-График')
+								+listItem('apply', 'Renga BIM')
+			+e.btn(href="#").btn.btn-primary Получить консультацию
+	// end sBaseList
+
+	//- cross
+	//- apply
