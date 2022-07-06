@@ -1,17 +1,52 @@
 
 mixin modal() 
 	//  start modals
-	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+	div(id="modal-industries"  style="display: none" )
+		+b.modal-win--list
+			+e.title.h3.text-center 1С:Отраслевые и специализированные решения
+			ul
+				li
+					+icon('apply')
+					p 1С:Комплексная автоматизация торговли алкогольной продукцией 8
+				li
+					+icon('apply')
+					p 1С:МДЛП 1С:Медицина. Больница
+				li
+					+icon('apply')
+					p 1С:Медицина. Больничная аптека
+				li
+					+icon('apply')
+					p 1С:Медицина. Больничные
+				li
+					+icon('apply')
+					p 1С:Медицина. Диетическое питание
+				li
+					+icon('apply')
+					p 1С:Медицина. Клиническая лаборатория
+				li
+					+icon('apply')
+					p 1С:Медицина. Поликлиника
+				li
+					+icon('apply')
+					p 1С:Медицина. Стоматологическая клиника
 	// #modal-call
+
+	div(id="modal-order-call"  style="display: none" )
+		+b.modal-win--order-call.text-center
+			+form-wrap()
+				+e.headline.h2 Заказать обратный звонок
+				p Оставьте заяку и наши сотрудники свяжется<br>с вами в кротчайшие сроки
+				+input('Ваше имя', 'text')
+				+input('Телефон', 'tel')
+				+policy()
+				+e.btn(href="#").btn.btn-primary Заказать звонок
+	// #modal-order-call
+
+	div(id="modal-tnx"  style="display: none" )
+		+b.modal-win--tnx.text-center
+			+e.headline.h2 Спасибо за обращение!
+			p Мы свяжемся с вами в ближайшее время.
+			+e.btn(href="#").btn.btn-primary Закрыть
+	// #modal-order-call
 	
 	// end modals

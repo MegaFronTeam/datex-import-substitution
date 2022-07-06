@@ -9,6 +9,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sBaseList/_sBaseList.pug
 include ../blocks/sWhoNeed/_sWhoNeed.pug
 include ../blocks/sImportSubstitution/_sImportSubstitution.pug
+include ../blocks/sTable/_sTable.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -30,6 +31,8 @@ block pagecontent
 	//- +topLine
 	+header().bg-yellow
 	+sBaseList
+	+sTable().bg-yellow
+	+sTable2()
 	+sWhoNeed().bg-yellow
 	+sImportSubstitution
 	+sContact().bg-yellow

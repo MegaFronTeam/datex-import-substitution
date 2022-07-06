@@ -1,0 +1,135 @@
+mixin sTable(data)
+	// start sTable
+	+b.SECTION.sTable.section#sTable&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.h1 #[span Аналоги иностранного ПО]<br>для пользователей
+			.custom-scroll
+				+e.table-wrap
+					table
+						tr
+							th Программное обеспечение
+							th Аналог
+							th Стоимость аналога ПП
+							th Трудозатраты, нормо-часы
+							th Состав работ
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+							td(rowspan = "10") Состав работ
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+						tr
+							td Программное обеспечение
+							td Аналог
+							td Стоимость аналога ПП
+							td Трудозатраты, нормо-часы
+						tr
+							td(colspan="2") Программное обеспечение
+							td Аналог
+							td Аналог
+						tr
+							td(colspan="2") Программное обеспечение
+							td Аналог
+							td Аналог
+						tr
+							td(colspan="2") Программное обеспечение
+							td(colspan="2") Аналог
+						tr
+							td(colspan="4")
+						tr
+							td(colspan="5") Итого: 30 850 ₽
+	// end sTable
+
+mixin sTable2(data)
+	// start sTable
+	+b.SECTION.sTable.section#sTable&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.h1 #[span Аналоги иностранного ПО]<br>для пользователей
+			.custom-scroll
+				+e.table-wrap
+					table
+						tr
+							th
+								+icon('cross')
+								span Программное обеспечение
+							th 
+								+icon('apply')
+								span Аналог
+							th Стоимость аналога ПП
+							th Трудозатраты, нормо-часы
+							th Состав работ
+						tr
+							td VM Ware, Hyper-V
+							td КСВ &quot;Брест&quot;
+							td 380 000 ₽
+							td 15
+							td(rowspan = "9")
+								ol
+									li Создание резервной копии БД.
+									li Установка виртуальной машины на&nbsp;сервер.
+									li Установка операционной системы на&nbsp;сервер.
+									li Установка проприетарных драйверов и&nbsp;прошивок для работы с&nbsp;перефирийными устройствами.
+									li Настройка PostgreSQL для работы с&nbsp;1С:Предприятие, в&nbsp;том числе: установка PostgreSQL (PG), настройка&nbsp;ОС для&nbsp;PG, настройка параметров&nbsp;PG (клиентских сеансов, параметров подключений, параметров WAL, фонового процесса записи, выполнения очистки базы, использование ресурсов ядра, планировщика запровсов, запростов к&nbsp;дисковой системе).
+									li Подключение клиентских машин к&nbsp;серверу базы данных.
+									li Настройка continuos бекапов
+									li Установка и&nbsp;настройка системы мониторинга основных показателей сервера
+									li Нагрузочное тестирование
+						tr
+							td Операционная система MS Windows Server 2012, 2019
+							td Astra Linux Special Edition 1.7
+							td 97 000 ₽
+							td 20
+						tr
+							td MS SQL Server, ORCALE Database
+							td СУБД Prostgres Pro Enterprise на 1 ядро x86
+							td 435 600 ₽
+							td 15
+						tr
+							td Orion NPM
+							td Zabbix 6.0 LTS
+							td Бесплатное ПО
+							td 30
+						tr
+							td Антивирус Symantec
+							td Dr. Web Desktop Security Suite, 12 мес., на 5 раб. станций
+							td 6 050 ₽
+							td 2
+						tr
+							td(colspan="2") С&nbsp;приминением виртуализации КСВ &quot;Брест&quot;
+							td.text-center 913 300 ₽
+							td Часов по 2000 ₽
+						tr
+							td(colspan="2") Без приминения виртуализации
+							td.text-center 533 300 ₽
+							td Часов по 2000 ₽
+						tr
+							td(colspan="2") Сервисное обслуживание сервера
+							td(colspan="2") 5 000 ₽/мес
+						tr
+							td(colspan="4")
+						tr
+							td(colspan="5") Итого: 30 850 ₽
+			+e.btn(href="#").btn.btn-primary Получить консультацию
+	// end sTable

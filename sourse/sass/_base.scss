@@ -455,20 +455,22 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
   /* Firefox */
-	--bs-primary: #DEDEDE;
+	--bs-primary: #{$primary};
  
   & {
     scrollbar-width: auto;
-    scrollbar-color: var(--bs-primary) transparent;
+    scrollbar-color: #E2DDDB transparent;
   }
 
   /* Chrome, Edge, and Safari */
   &::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
+		height: 2px;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background: #E2DDDB;
+		border-radius: 16px;
   }
 
   &::-webkit-scrollbar-thumb {

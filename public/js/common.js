@@ -373,6 +373,12 @@ function eventHandler() {
 		}
 	});
 
+	const sTableSwiper = new Swiper('.sTable__slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
