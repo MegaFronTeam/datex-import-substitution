@@ -12,6 +12,12 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(57);
 		}
+		h2 {
+			font-size: rem(20);
+			@include media-breakpoint-up(md) {
+				font-size: rem(60);
+			}
+		}
 	}
 	&__item{
 
@@ -31,6 +37,10 @@
 		&__row{
 			--bs-gutter-x: #{rem(0)};
 			// --bs-gutter-y: #{rem()};
+			flex-direction: column;
+			@include media-breakpoint-up(md) {
+				flex-direction: row;
+			}
 			&:not(:last-child) {
 				border-bottom: 1px solid $gray-300;
 			}
@@ -43,7 +53,7 @@
 			}
 			&:first-child {
 				border-bottom: 1px solid $gray-300;
-				@include media-breakpoint-up(lg) {
+				@include media-breakpoint-up(md) {
 					border-bottom: none;
 					border-right: 1px solid $gray-300;
 				}
@@ -70,9 +80,11 @@
 			}
 			&.active {
 				.dd-group__status {
-					background-image: url('../img/svg/arrow-down.svg');
+					// background-image: url('../img/svg/arrow-down.svg');
+					background-image: url('../img/svg/close.svg');
 					@include media-breakpoint-down(lg) {
-						background-image: url('../img/svg/close.svg');
+						// background-image: url('../img/svg/close.svg');
+						background-image: url('../img/svg/arrow-down.svg');
 					}
 				}
 			}
@@ -89,7 +101,8 @@
 			display: block;
 			width: 20px;
 			height: 20px;
-			background-image: url('../img/svg/close.svg');
+			// background-image: url('../img/svg/close.svg');
+			background-image: url('../img/svg/arrow-down.svg');
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
@@ -97,7 +110,8 @@
 			top: rem(20);
 			right: rem(20);
 			@include media-breakpoint-down(lg) {
-				background-image: url('../img/svg/arrow-down.svg');
+				// background-image: url('../img/svg/arrow-down.svg');
+				background-image: url('../img/svg/close.svg');
 			}
 			@include media-breakpoint-up(lg) {
 				top: rem(27);
