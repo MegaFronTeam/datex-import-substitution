@@ -104,8 +104,10 @@
 		}
 		p {
 			margin-bottom: rem(30);
+			font-size: rem(14);
 			@include media-breakpoint-up(sm) {
 				margin-bottom: rem(40);
+				font-size: rem(16);
 			}
 		}
 		.modal-win__btn {
@@ -133,7 +135,11 @@
 		}
 	}
 	p {
-		margin-bottom: rem(10);
+		margin-bottom: rem(13);
+		font-size: rem(14);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(16);
+		}
 	}
 	&__policy {
 		font-size: rem(12);
