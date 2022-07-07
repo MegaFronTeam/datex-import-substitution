@@ -159,6 +159,7 @@
 				&:before {
 					content: counter(num);
 					counter-increment: num;
+					font-family: 'ProximaNova';
 					display: flex;
 					align-items: center;
 					justify-content: center;
