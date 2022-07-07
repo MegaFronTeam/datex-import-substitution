@@ -35,7 +35,7 @@ const JSCCommon = {
 		function addData() {
 			linkModal.forEach(element => {
 				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
+					// let modal = document.querySelector(element.getAttribute("href"));
 					const data = element.dataset;
 
 					function setValue(val, elem) {
@@ -310,9 +310,9 @@ function eventHandler() {
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+		window.scrollY > 110
+			? topNav.classList.add('scrolled')
+			: topNav.classList.remove('scrolled');
 	}
 
 	function whenResize() {
@@ -365,19 +365,20 @@ function eventHandler() {
 	});
 	// modal window
 
-	window.addEventListener('scroll', function() {
-		if (this.scrollY >= 110) {
-			$('.top-nav').addClass('scrolled');
-		} else {
-			$('.top-nav').removeClass('scrolled');
-		}
-	});
+	// window.addEventListener('scroll', function() {
+	// 	if (this.scrollY >= 110) {
+	// 		$('.top-nav').addClass('scrolled');
+	// 	} else {
+	// 		$('.top-nav').removeClass('scrolled');
+	// 	}
+	// });
 
 	const sTableSwiper = new Swiper('.sTable__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		scrollbar: {
 			el: ".swiper-scrollbar",
+			draggable: true,
 		},
 	});
 
